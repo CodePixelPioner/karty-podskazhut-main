@@ -127,5 +127,39 @@ figure {
   font-size: 18px;
   text-align: center;
   padding: 20px 0;
-  border-block-end: 1px solid #312a4e;;
+  border-block-end: 1px solid currentColor;
+}
+
+.content__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-block-start: 7%;
+  aspect-ratio: 4/3;
+  border: 1px solid currentColor;
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  font-size: 18px;
+}
+
+.colored-text {
+  position: relative;
+  display: inline-block;
+}
+
+.colored-text::after {
+  content: '';
+  position: absolute;
+  background-color: var(--accent-color);
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
 }
