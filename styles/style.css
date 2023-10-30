@@ -102,3 +102,30 @@ figure {
   inset-block-start: 50%;
   inset-inline-start: -25px;
 }
+
+.content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+  background-color: var(--accent-color);
+  padding: 0 4px;
+  margin-inline-end: 1px;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.content__figure {
+  margin: 7% auto;
+  inline-size: calc(100% + 10vi);
+  position: relative;
+  inset-inline-end: 5vi;
+}
+
+.content__picture {
+  inline-size: 100%;
+}
+
+.content__picture-caption {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 0;
+  border-block-end: 1px solid #312a4e;;
+}
