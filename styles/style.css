@@ -1,6 +1,6 @@
 :root {
   --main-font: Raleway;
-  --accent-font: 'STIX Two Text';
+  --accent-font: "STIX Two Text";
   --bg-color: #f3efec;
   --text-color: #312a4e;
   --accent-color: #ffab6b;
@@ -32,6 +32,20 @@ figure {
   margin: 0;
 }
 
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
 .heading {
   font-family: var(--accent-font, serif);
   font-weight: 600;
@@ -57,7 +71,7 @@ figure {
   margin: 7% 0 2.5%;
 }
 
- .content__text-block {
+.content__text-block {
   font-size: 18px;
 }
 
@@ -90,7 +104,7 @@ figure {
 }
 
 .content__list li::before {
-  content: '';
+  content: "";
   position: absolute;
   inline-size: 15px;
   block-size: 15px;
@@ -103,7 +117,8 @@ figure {
   inset-inline-start: -25px;
 }
 
-.content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+.content__text-block_type_first-lettered
+  .content__paragraph:first-of-type::first-letter {
   background-color: var(--accent-color);
   padding: 0 4px;
   margin-inline-end: 1px;
@@ -154,7 +169,7 @@ figure {
 }
 
 .colored-text::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--accent-color);
   z-index: -1;
@@ -200,7 +215,7 @@ figure {
 }
 
 .header__theme-button_is-active::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--accent-color);
   z-index: -1;
@@ -208,4 +223,15 @@ figure {
   block-size: 0.5ch;
   inset-block-end: 0.3ch;
   inset-inline-start: -4px;
+}
+
+.footer {
+  text-align: center;
+  margin-block-start: 10%;
+  border-block-start: 1px solid currentColor;
+  padding: 2.5%;
+}
+
+.footer__copyright {
+  font-size: 18px;
 }
