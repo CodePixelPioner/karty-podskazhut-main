@@ -163,3 +163,49 @@ figure {
   inset-block-end: 0.3ch;
   inset-inline-start: -4px;
 }
+
+.header__theme-toggler {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  align-items: center;
+  padding-block: 20px;
+}
+
+.header__theme-button {
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  padding: 0;
+}
+
+.header__theme-button:hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  content: '';
+  position: absolute;
+  background-color: var(--accent-color);
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
+}
